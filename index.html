@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamalnath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body class="is-loading">
+    <div class="preloader" aria-label="Loading portfolio" role="status">
+      <div class="preloader-mark">
+        <span>K</span>
+      </div>
+      <div class="preloader-text">
+        <strong>Kamalnath</strong>
+        <small>Loading Portfolio</small>
+      </div>
+      <div class="preloader-line" aria-hidden="true"></div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Kamalnath home">
+        <span>K</span>Kamalnath.
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Skill</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-light" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-copy animate-up">
+          <h1>
+            I'm <em>Kamalnath,</em><br />
+            Python Full Stack<br />
+            Developer.
+          </h1>
+          <p>
+            I build scalable backend-first web applications with Python, Django, React.js, API integrations, and clean responsive interfaces.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View My Projects <span>&rarr;</span></a>
+           
+          </div>
+        </div>
+
+        <div class="hero-art animate-up delay-1" aria-label="Interactive 3D developer workspace">
+          <div class="hero-3d" id="hero3d">
+            <canvas id="hero3dCanvas" aria-hidden="true"></canvas>
+            <div class="hero-3d-label label-python">
+              <strong>Python</strong>
+              <span>Backend</span>
+            </div>
+            <div class="hero-3d-label label-django">
+              <strong>Django</strong>
+              <span>APIs</span>
+            </div>
+            <div class="hero-3d-label label-mysql">
+              <strong>MySQL</strong>
+              <span>Database</span>
+            </div>
+            <div class="hero-3d-status">
+              <strong>Web Developer</strong>
+              <span>3D Workspace</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Services">
+        <div class="ticker-track">
+          <div class="ticker-group">
+            <span>*Front-end</span>
+            <span>*Back-end</span>
+            <span>*Web Developer</span>
+            <span>*Web Design</span>
+            <span>*Dashboard</span>
+            <span>*Login Form</span>
+            <span>*Register Form</span>
+          </div>
+          <div class="ticker-group" aria-hidden="true">
+            <span>*Front-end</span>
+            <span>*Back-end</span>
+            <span>*Web Developer</span>
+            <span>*Web Design</span>
+            <span>*Dashboard</span>
+            <span>*Login Form</span>
+            <span>*Register Form</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="about" class="about section section-dark">
+        <div class="about-image animate-up">
+          <div class="about-circle">
+            <img src="assets/photo.png" alt="Kamalnath portrait" />
+          </div>
+        </div>
+        <div class="about-copy animate-up delay-1">
+          <span class="section-kicker">About Me</span>
+          <h2>Who is <em>Kamalnath?</em></h2>
+          <p>
+            I am a Python Full Stack Developer with 1 year of experience at Digiplus Company, focused on backend development, API integration, database management, and responsive UI development.
+          </p>
+          <div class="metric-row">
+            <div><strong>1+</strong><span>Year Experience</span></div>
+            <div><strong>8+</strong><span>Core Skills</span></div>
+            <div><strong>10+</strong><span>Featured Projects</span></div>
+          </div>
+          <a class="btn btn-primary slim about-btn" href="resume.pdf" download="Kamalnath-Resume.pdf">Download CV <span>&rarr;</span></a>
+        </div>
+      </section>
+
+      <section id="services" class="tools section">
+        <div class="section-title centered animate-up">
+          <span class="section-kicker">My Favorite Tools</span>
+          <h2><em>Exploring the Stack</em><br />Behind My Work</h2>
+        </div>
+        <div class="tool-grid animate-up delay-1">
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML logo" /></div>
+            <strong>HTML</strong>
+            <span>Clean page structure.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS logo" /></div>
+            <strong>CSS</strong>
+            <span>Responsive visual styling.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap logo" /></div>
+            <strong>Bootstrap</strong>
+            <span>Fast responsive layouts.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript logo" /></div>
+            <strong>JavaScript</strong>
+            <span>Interactive browser behavior.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python logo" /></div>
+            <strong>Python</strong>
+            <span>Backend logic and automation.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django logo" /></div>
+            <strong>Django</strong>
+            <span>Secure web application work.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL logo" /></div>
+            <strong>MySQL</strong>
+            <span>Database storage and queries.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" alt="WordPress logo" /></div>
+            <strong>WordPress</strong>
+            <span>Website content management.</span>
+          </article>
+          <article class="tool-card">
+            <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop logo" /></div>
+            <strong>Photoshop</strong>
+            <span>Visual editing and assets.</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section section-soft">
+        <div class="split-title animate-up">
+          <div>
+            <span class="section-kicker">My Portfolio</span>
+            <h2>My Latest <em>Projects</em></h2>
+          </div>
+          <a class="btn btn-primary slim project-btn" href="project.html">View All Project <span>&rarr;</span></a>
+        </div>
+        <div class="project-grid animate-up delay-1">
+          <article class="project-card">
+            <div class="project-preview preview-frontend" aria-label="Front-end project visual">
+              <img src="assets/frontend-project-ai.png" alt="Front-end development project visual with responsive website interface elements" />
+            </div>
+            <div class="project-body">
+              <span class="project-type">Front-end Project</span>
+              <h3>Responsive Website Interface</h3>
+              <p>
+                Clean and mobile-friendly front-end design using HTML, CSS, JavaScript, Bootstrap, and React-style layouts.
+              </p>
+              <a class="project-link" href="project.html#business">Explore Now <span>&rarr;</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-preview preview-backend" aria-label="Dashboard backend project visual">
+              <img src="assets/backend-project-ai.png" alt="Back-end dashboard project visual with database and analytics elements" />
+            </div>
+            <div class="project-body">
+              <span class="project-type">Back-end Project</span>
+              <h3>Admin Dashboard System</h3>
+              <p>
+                Dashboard-focused backend project with Python, Django/Flask, MySQL database work, authentication, and API handling.
+              </p>
+              <a class="project-link" href="project.html#dashboard">Explore Now <span>&rarr;</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="journey" class="journey section">
+        <div class="section-title centered animate-up">
+          <span class="section-kicker">Education & Work</span>
+          <h2>My <em>Academic and<br />Professional</em> Journey</h2>
+        </div>
+        <div class="journey-grid animate-up delay-1">
+          <article class="timeline-card">
+            <h3>
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M3 9l9-5 9 5-9 5-9-5Z"></path>
+                  <path d="M7 11v5c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5v-5"></path>
+                  <path d="M21 9v6"></path>
+                </svg>
+              </span>
+              Education
+            </h3>
+            <div class="timeline-item">
+              <small>10th and 12th</small>
+              <strong>Vidhya Matric Higher Secondary School</strong>
+              <p>Completed school education with a strong foundation in computer science and problem-solving.</p>
+            </div>
+            <div class="timeline-item">
+              <small>B.Com (CA)</small>
+              <strong>Annai Vailankanni Arts & Science College</strong>
+              <p>Studied commerce with computer applications, including programming basics, databases, and web technologies.</p>
+            </div>
+          </article>
+          <article class="timeline-card">
+            <h3>
+              <span aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M5 6.5h14v9H5v-9Z"></path>
+                  <path d="M3 18h18"></path>
+                  <path d="M9 18h6"></path>
+                </svg>
+              </span>
+              Work Experience
+            </h3>
+            <div class="timeline-item">
+              <small>6 Month Internship</small>
+              <strong>Uniq Technology Pvt Ltd</strong>
+              <p><span>Role : Python Developer</span>Worked on Python development, backend concepts, API basics, and real-time project practice.</p>
+            </div>
+            <div class="timeline-item">
+              <small>1 Year Experience</small>
+              <strong>Digiplus Pvt Ltd</strong>
+              <p><span>Role : Web Developer</span>Handled bug fixing, UI development, database management, website updates, and performance improvements.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials section section-soft">
+        <div class="section-title centered animate-up">
+          <span class="section-kicker">Clients Testimonials</span>
+          <h2>The Impact of My Work:<br /><em>Client Testimonials</em></h2>
+        </div>
+        <div class="testimonial-slider animate-up delay-1" aria-label="Client testimonials slider">
+          <div class="testimonial-track">
+            <article class="testimonial-card">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                Kamalnath approaches development with patience, clear thinking, and strong ownership. His backend work and API integration helped us move faster with fewer bugs.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-one" aria-hidden="true">PL</div>
+                <div>
+                  <strong>Project Lead</strong>
+                  <small>Web Application Team</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                He understood the requirement quickly and delivered clean UI updates with good responsiveness. Communication was clear from start to finish.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-two" aria-hidden="true">RM</div>
+                <div>
+                  <strong>Ramesh Kumar</strong>
+                  <small>Business Website Owner</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">***** <span>4.9</span></div>
+              <p>
+                The dashboard fixes were handled neatly. Kamalnath improved loading flow, corrected data issues, and kept the application stable.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-three" aria-hidden="true">AK</div>
+                <div>
+                  <strong>Arun K</strong>
+                  <small>Operations Coordinator</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                His API integration work saved time for our team. The code was organized, easy to test, and simple for us to maintain later.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-four" aria-hidden="true">ST</div>
+                <div>
+                  <strong>Sneha Thomas</strong>
+                  <small>Product Support Team</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                Kamalnath brought a practical mindset to every task. He fixed bugs carefully and explained each change in a simple way.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-five" aria-hidden="true">DV</div>
+                <div>
+                  <strong>Deepak V</strong>
+                  <small>Startup Founder</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                Kamalnath approaches development with patience, clear thinking, and strong ownership. His backend work and API integration helped us move faster with fewer bugs.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-one">PL</div>
+                <div>
+                  <strong>Project Lead</strong>
+                  <small>Web Application Team</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                He understood the requirement quickly and delivered clean UI updates with good responsiveness. Communication was clear from start to finish.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-two">RM</div>
+                <div>
+                  <strong>Ramesh Kumar</strong>
+                  <small>Business Website Owner</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <div class="stars">***** <span>4.9</span></div>
+              <p>
+                The dashboard fixes were handled neatly. Kamalnath improved loading flow, corrected data issues, and kept the application stable.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-three">AK</div>
+                <div>
+                  <strong>Arun K</strong>
+                  <small>Operations Coordinator</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                His API integration work saved time for our team. The code was organized, easy to test, and simple for us to maintain later.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-four">ST</div>
+                <div>
+                  <strong>Sneha Thomas</strong>
+                  <small>Product Support Team</small>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card" aria-hidden="true">
+              <div class="stars">***** <span>5.0</span></div>
+              <p>
+                Kamalnath brought a practical mindset to every task. He fixed bugs carefully and explained each change in a simple way.
+              </p>
+              <div class="testimonial-profile">
+                <div class="profile-photo profile-five">DV</div>
+                <div>
+                  <strong>Deepak V</strong>
+                  <small>Startup Founder</small>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section section-dark">
+        <div class="section-title centered animate-up">
+          <span class="section-kicker">FAQs</span>
+          <h2>Questions? <em>Look here.</em></h2>
+        </div>
+        <div class="faq-layout">
+          <div class="faq-list animate-up delay-1">
+            <button class="faq-item active" type="button">
+              <span>What industries have you worked in as a developer?</span><b>-</b>
+            </button>
+            <div class="faq-panel open">I have worked on web application and monitoring dashboard workflows, with a focus on backend systems and APIs.</div>
+            <button class="faq-item" type="button">
+              <span>Can I download your resume/CV for information?</span><b>+</b>
+            </button>
+            <div class="faq-panel">Yes. Use the Download Resume button to get my CV directly from this portfolio.</div>
+            <button class="faq-item" type="button">
+              <span>Are you available for full stack development work?</span><b>+</b>
+            </button>
+            <div class="faq-panel">Yes, I am open to Python, Django, Flask, React.js, API, and database-focused roles or projects.</div>
+            <button class="faq-item" type="button">
+              <span>Are you available for freelance projects?</span><b>+</b>
+            </button>
+            <div class="faq-panel">Yes, I am available for freelance work such as portfolio websites, business websites, API integration, bug fixing, and dashboard development.</div>
+            <button class="faq-item" type="button">
+              <span>Are you currently looking for a developer job?</span><b>+</b>
+            </button>
+            <div class="faq-panel">Yes, I am actively looking for web developer and full stack developer opportunities where I can work with frontend, backend, APIs, and databases.</div>
+          </div>
+          <figure class="faq-visual animate-up delay-1">
+            <img src="assets/faq-developer-illustration.png" alt="Developer desk illustration with FAQ and coding elements" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="contact-copy animate-up">
+          <span class="section-kicker">Contact Us</span>
+          <h2>Let's Talk for <em>Your<br />Next Projects</em></h2>
+          <p>Share the project idea, role, or collaboration details and I will get back to you.</p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9Z"/></svg>
+              </span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:8248886878">8248886878</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20.5 11.9a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-4.7a8.5 8.5 0 1 1 15.8-4.4Z"/><path d="M9.4 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c-.1.1-.2.3-.1.5.4.9 1.2 1.7 2.1 2.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.6 0 .7-.5 1.5-1.1 1.8-.7.4-1.6.4-3-.2-2.5-1-4.2-3.2-4.7-4.8-.5-1.3-.3-2.2.2-2.8Z"/></svg>
+              </span>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/918248886878">8248886878</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 7-10 6L2 7"/></svg>
+              </span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:kamalnath2603@gmail.com">kamalnath2603@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <strong>Address</strong>
+                <p>Thanjavur, Tamil Nadu, India</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form class="contact-form animate-up delay-1">
+          <label>Name *<input type="text" name="name" placeholder="Enter your name" required /></label>
+          <label>Phone Number *<input type="tel" name="phone" placeholder="Enter phone number" required /></label>
+          <label>Email ID *<input type="email" name="email" placeholder="Enter email id" required /></label>
+          <label>
+            What are you choosing me for? *
+            <select name="purpose" required>
+              <option value="" disabled selected hidden>Select option</option>
+              <option>Freelance</option>
+              <option>Job Appointment</option>
+            </select>
+          </label>
+          <label>Message *<textarea name="message" placeholder="Enter your message" required></textarea></label>
+          <button class="btn btn-primary slim submit-btn" type="submit">Submit <span>&rarr;</span></button>
+          <p class="form-success" role="status" aria-live="polite">Success! Your message is ready to send.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#home"><span>K</span>Kamalnath.</a>
+          <p>Python Full Stack Developer creating backend-led web applications with clean, usable interfaces.</p>
+        </div>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://wa.me/918248886878" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2a9.93 9.93 0 0 0-8.63 14.88L2 22l5.25-1.38A9.93 9.93 0 1 0 12.04 2Zm0 18.17a8.22 8.22 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31A8.23 8.23 0 1 1 12.04 20.17Zm4.51-6.15c-.25-.12-1.46-.72-1.69-.8-.23-.09-.4-.12-.56.12-.17.25-.65.8-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.42 1.03 2.59.12.17 1.77 2.7 4.29 3.78.6.26 1.07.42 1.43.53.6.19 1.15.16 1.59.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29Z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.29ZM5.32 7.41a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.04H3.54V8.98H7.1v11.47ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24"><path d="M18.9 2h3.3l-7.2 8.25L23.5 22h-6.65l-5.21-6.82L5.68 22H2.36l7.7-8.8L1.9 2h6.82l4.7 6.22L18.9 2Zm-1.16 17.93h1.83L7.72 3.96H5.75l11.99 15.97Z"/></svg>
+            <span>Twitter</span>
+          </a>
+          <a href="#" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.21 23.9c.6.11.82-.26.82-.58v-2.23c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.12C19.53 3.58 12 3.58 12 3.58s-7.53 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3 3 0 0 0 2.1 2.12c1.87.5 9.4.5 9.4.5s7.53 0 9.4-.5a3 3 0 0 0 2.1-2.12c.5-1.88.5-5.8.5-5.8s0-3.92-.5-5.8ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026. All Rights Reserved.</p>
+        <p>Designed by <span>Kamalnath</span></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
