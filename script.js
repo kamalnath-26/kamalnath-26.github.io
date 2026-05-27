@@ -11,6 +11,82 @@ const projectTabs = document.querySelectorAll('[data-project-tab]');
 const projectPanels = document.querySelectorAll('[data-project-panel]');
 let formMessageTimer;
 
+const initCursorTrail = () => {
+  const canUseTrail = window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!canUseTrail) {
+    return;
+  }
+
+  const trailLength = 9;
+  const dots = Array.from({ length: trailLength }, (_, index) => {
+    const dot = document.createElement('span');
+    const progress = 1 - index / trailLength;
+    const size = 15 - index * 0.8;
+
+    dot.className = 'cursor-trail-dot';
+    dot.style.width = `${size}px`;
+    dot.style.height = `${size}px`;
+    dot.style.setProperty('--trail-opacity', (0.82 - index * 0.065).toFixed(2));
+    document.body.appendChild(dot);
+
+    return {
+      element: dot,
+      x: window.innerWidth / 2,
+      y: window.innerHeight / 2,
+      scale: Math.max(0.35, progress),
+    };
+  });
+
+  const pointer = {
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2,
+    active: false,
+  };
+
+  const setPointer = (event) => {
+    pointer.x = event.clientX;
+    pointer.y = event.clientY;
+
+    if (!pointer.active) {
+      pointer.active = true;
+      dots.forEach((dot) => {
+        dot.x = pointer.x;
+        dot.y = pointer.y;
+      });
+      document.body.classList.add('cursor-trail-active');
+    }
+  };
+
+  const hideTrail = () => {
+    pointer.active = false;
+    document.body.classList.remove('cursor-trail-active');
+  };
+
+  window.addEventListener('pointermove', setPointer, { passive: true });
+  window.addEventListener('pointerleave', hideTrail);
+  window.addEventListener('blur', hideTrail);
+
+  const animateTrail = () => {
+    let nextX = pointer.x;
+    let nextY = pointer.y;
+
+    dots.forEach((dot, index) => {
+      dot.x += (nextX - dot.x) * (index === 0 ? 0.5 : 0.36);
+      dot.y += (nextY - dot.y) * (index === 0 ? 0.5 : 0.36);
+      dot.element.style.transform = `translate3d(${dot.x}px, ${dot.y}px, 0) translate(-50%, -50%) scale(${dot.scale})`;
+      nextX = dot.x;
+      nextY = dot.y;
+    });
+
+    requestAnimationFrame(animateTrail);
+  };
+
+  animateTrail();
+};
+
+initCursorTrail();
+
 const buildContactMessage = ({ name, phone, email, purpose, message }) => `New portfolio enquiry
 
 Name: ${name}
