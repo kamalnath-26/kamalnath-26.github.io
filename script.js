@@ -9,7 +9,12 @@ const hero3dCanvas = document.querySelector('#hero3dCanvas');
 const preloader = document.querySelector('.preloader');
 const projectTabs = document.querySelectorAll('[data-project-tab]');
 const projectPanels = document.querySelectorAll('[data-project-panel]');
+const comingSoonLinks = document.querySelectorAll('[data-coming-soon]');
+const testimonialSlider = document.querySelector('.testimonial-slider');
+const testimonialTrack = document.querySelector('.testimonial-track');
 let formMessageTimer;
+let comingSoonTimer;
+let testimonialTimer;
 
 const initCursorTrail = () => {
   const canUseTrail = window.matchMedia('(pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -173,6 +178,79 @@ projectTabs.forEach((tab) => {
 if (projectTabs.length && window.location.hash) {
   activateProjectTab(window.location.hash.slice(1));
 }
+
+const showComingSoonToast = () => {
+  let toast = document.querySelector('.coming-soon-toast');
+
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'coming-soon-toast';
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+    toast.textContent = 'Coming soon';
+    document.body.appendChild(toast);
+  }
+
+  window.clearTimeout(comingSoonTimer);
+  toast.classList.add('show');
+
+  comingSoonTimer = window.setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2200);
+};
+
+comingSoonLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    showComingSoonToast();
+  });
+});
+
+const initTestimonialSlider = () => {
+  if (!testimonialSlider || !testimonialTrack || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  const getStep = () => {
+    const firstCard = testimonialTrack.querySelector('.testimonial-card');
+    const styles = window.getComputedStyle(testimonialTrack);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+
+    return firstCard ? firstCard.getBoundingClientRect().width + gap : 0;
+  };
+
+  const stopAutoSlide = () => {
+    window.clearInterval(testimonialTimer);
+  };
+
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    testimonialTimer = window.setInterval(() => {
+      const step = getStep();
+
+      if (!step) {
+        return;
+      }
+
+      const resetPoint = testimonialTrack.scrollWidth / 2;
+
+      if (testimonialSlider.scrollLeft >= resetPoint - step) {
+        testimonialSlider.scrollTo({ left: 0, behavior: 'auto' });
+      } else {
+        testimonialSlider.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }, 2600);
+  };
+
+  testimonialSlider.addEventListener('mouseenter', stopAutoSlide);
+  testimonialSlider.addEventListener('mouseleave', startAutoSlide);
+  testimonialSlider.addEventListener('touchstart', stopAutoSlide, { passive: true });
+  testimonialSlider.addEventListener('touchend', startAutoSlide, { passive: true });
+
+  startAutoSlide();
+};
+
+initTestimonialSlider();
 
 const observerOptions = {
   threshold: 0.15,
