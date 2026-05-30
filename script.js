@@ -211,6 +211,10 @@ const initTestimonialSlider = () => {
     return;
   }
 
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+
   const getStep = () => {
     const firstCard = testimonialTrack.querySelector('.testimonial-card');
     const styles = window.getComputedStyle(testimonialTrack);
@@ -246,6 +250,41 @@ const initTestimonialSlider = () => {
   testimonialSlider.addEventListener('mouseleave', startAutoSlide);
   testimonialSlider.addEventListener('touchstart', stopAutoSlide, { passive: true });
   testimonialSlider.addEventListener('touchend', startAutoSlide, { passive: true });
+  testimonialSlider.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') {
+      return;
+    }
+
+    isDragging = true;
+    dragStartX = event.clientX;
+    dragStartScroll = testimonialSlider.scrollLeft;
+    testimonialSlider.classList.add('is-dragging');
+    testimonialSlider.setPointerCapture(event.pointerId);
+    stopAutoSlide();
+  });
+
+  testimonialSlider.addEventListener('pointermove', (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    event.preventDefault();
+    testimonialSlider.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+  });
+
+  const endDrag = (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    isDragging = false;
+    testimonialSlider.classList.remove('is-dragging');
+    testimonialSlider.releasePointerCapture?.(event.pointerId);
+    startAutoSlide();
+  };
+
+  testimonialSlider.addEventListener('pointerup', endDrag);
+  testimonialSlider.addEventListener('pointercancel', endDrag);
 
   startAutoSlide();
 };

@@ -1123,6 +1123,14 @@ em {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-x;
+}
+
+.testimonial-slider.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
 }
 
 .testimonial-slider::-webkit-scrollbar {
@@ -1929,8 +1937,8 @@ em {
   }
 
   .testimonial-card {
-    width: min(86vw, 430px);
-    flex-basis: min(86vw, 430px);
+    width: 100%;
+    flex-basis: 100%;
   }
 
   .footer-social {
