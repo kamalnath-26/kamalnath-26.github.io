@@ -2443,13 +2443,13 @@ em {
     display: none;
   }
 
-  .metric-row {
+  /* .metric-row {
     grid-template-columns: 1fr;
-  }
+  } */
 
-  .tool-grid {
+  /* .tool-grid {
     grid-template-columns: 1fr;
-  }
+  } */
 
   .project-preview {
     height: 190px;
